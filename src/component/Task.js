@@ -6,7 +6,11 @@ const Task = (props) => {
     
     return (
         
-           props.tasks.map( (e) => <TaskU e={e} key={e.id} />)
+           props.tasks.map( (e) => <TaskU e={e} key={e.id} 
+            delete={props.delete}
+            check={props.check}
+           />
+           )
         
     )
 }

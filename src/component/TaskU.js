@@ -2,7 +2,7 @@ import React from 'react';
 import  PropTypes  from 'prop-types'
 
 export const TaskU = (props) => {
-       
+    //    console.log(props);
     function StyleAdd(props)  {
 
         return{
@@ -17,8 +17,8 @@ export const TaskU = (props) => {
             {props.e.id} - 
             {props.e.name}- 
             {props.e.des}
-            <input type="checkbox" />
-            <button>x</button>
+            <input type="checkbox" onChange={props.check.bind(this, props.e.id)} />
+            <button onClick={props.delete.bind(this, props.e.id)}>x</button>
         </div>
     )
 }
